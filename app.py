@@ -3,7 +3,7 @@ import google.generativeai as genai
 import os
 
 # --- KONFIGURASI APLIKASI STREAMLIT ---
-st.set_page_config(page_title="Chatbot Ahli Obat", page_icon="💊")
+st.set_page_config(page_title="Chatbot medis", page_icon="💊")
 
 st.title("💊 Chatbot Ahli Obat")
 st.write("Tanyakan tentang cara minum obat. Saya akan memberikan jawaban singkat dan faktual, serta menolak pertanyaan non-obat.")
@@ -101,4 +101,5 @@ if user_input:
 if st.button("Hapus Riwayat Chat"):
     st.session_state.chat_history = []
     st.session_state.gemini_chat = model.start_chat(history=INITIAL_CHATBOT_CONTEXT)
+
     st.experimental_rerun()
