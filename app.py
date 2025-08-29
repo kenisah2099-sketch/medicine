@@ -88,5 +88,3 @@ if prompt := st.chat_input("Tulis pertanyaan Anda di sini..."):
     
     # Tambahkan respons model ke riwayat chat
     st.session_state.messages.append({"role": "model", "content": full_response})
-
-�
